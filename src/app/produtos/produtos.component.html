@@ -1,0 +1,24 @@
+
+<div class="container"> 
+      <div *ngIf="selectedProduct" class="maindetails">
+        <h2 id="detalhes">Dados do (a) estudante {{selectedProduct.name | uppercase}}</h2>
+        <div>id: {{selectedProduct.id}}</div><br>
+        <div class="details">
+          <label for="product-name">Nome: </label>
+          <input id="product-name" [(ngModel)]="selectedProduct.name" placeholder="Nome"><br><br>
+          <label for="product-preco">Idade: </label>
+          <input id="product-preco" [(ngModel)]="selectedProduct.preco" placeholder="Idade"><br><br>
+          <label for="product-qtdEstoque">Semestre: </label>
+          <input id="product-qtdEstoque" [(ngModel)]="selectedProduct.qtdEstoque" placeholder="Semestre"><br><br>
+          <label for="product-categoria">Curso: </label>
+          <input id="product-categoria" [(ngModel)]="selectedProduct.categoria" placeholder="Curso"><br>
+        </div>
+      </div>  
+    <h2>Estudantes Cadastrados</h2>
+    <ul class="produtos">
+      <li *ngFor="let produto of produtos" (click)="onSelect(produto)">
+        <span class="badge">{{produto.id}}</span> {{produto.name}}
+      </li>
+    </ul>
+
+</div>
