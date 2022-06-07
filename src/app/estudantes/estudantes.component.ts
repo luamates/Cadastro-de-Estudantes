@@ -9,6 +9,7 @@ import { EstudanteService } from '../estudante.service';
 })
 export class EstudantesComponent implements OnInit {
   estudantes: Estudante[] = [];
+
   estudante: Estudante = {
     id: 1,
     name: 'Sérgio Pato',
@@ -16,11 +17,15 @@ export class EstudantesComponent implements OnInit {
     curso: 'Direito',
     semestre: '4'
   }
+  
   selectedEstudante?: Estudante;
+
+  constructor(private estudanteService: EstudanteService) { }
+
   onSelect(estudante: Estudante): void {
     this.selectedEstudante = estudante;
   }
-  constructor(private estudanteService: EstudanteService) { }
+  
 
   getEstudantes(): void {
     this.estudanteService.getEstudantes()

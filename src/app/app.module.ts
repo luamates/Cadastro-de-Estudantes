@@ -10,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { ProfessoresComponent } from './professores/professores.component'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { TeacherDetailComponent } from './teacher-detail/teacher-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     EstudantesComponent,
     StudentDetailComponent,
     MessagesComponent,
-    ProfessoresComponent
+    ProfessoresComponent,
+    TeacherDetailComponent
   ],
   imports: [
     BrowserModule,

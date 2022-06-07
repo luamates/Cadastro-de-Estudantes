@@ -8,7 +8,7 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class EstudanteService {
-
+  
   constructor(private messageService: MessageService) { }
 
   getEstudantes(): Observable<Estudante[]> {
@@ -16,4 +16,11 @@ export class EstudanteService {
     this.messageService.add('EstudanteService: fetched estudantes');
     return estudantes;
   }
+
+  getEstudante(id: number) {
+    const e = ESTUDANTES.find(e => e.id === id)!;
+    this.messageService.add(`EstudanteService: fetched estudante=${id}`);
+    return of(e);
+  }
+
 }

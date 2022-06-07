@@ -4,12 +4,13 @@
   <h2>Estudantes</h2>
   <ul class="estudantes">
     <li *ngFor="let estudante of estudantes">
-      <button [class.selected]="estudante == selectedEstudante" type="button" (click)="onSelect(estudante)">
-        <span [class.selected]="estudante == selectedEstudante">{{ estudante.name }}</span>
+      <button [class.selected]="estudante === selectedEstudante" type="button" routerLink="/detail/{{estudante.id}}">
+        <span [class.selected]="estudante === selectedEstudante">{{ estudante.name }}</span>
       </button>
     </li>
   </ul>
 </div>
 
-<app-student-detail [estudante]="selectedEstudante"></app-student-detail>
+
+<app-student-detail></app-student-detail>
  
