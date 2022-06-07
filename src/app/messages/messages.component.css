@@ -1,0 +1,27 @@
+.mensagens {
+    text-align: center;
+    margin: auto;
+    width: 300px;
+    padding-left: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(142, 228, 143);
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background-color: rgb(18, 70, 19);
+    color: white;
+}

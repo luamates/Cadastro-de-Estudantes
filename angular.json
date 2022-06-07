@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "395413ce-52f4-46cf-b309-9cff7602710e"
+    "analytics": "af232200-fbfb-48a3-8559-0e2d2d8becad"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tarefa08-cadastro-de-produtos": {
+    "cadastro-de-estudantes": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tarefa08-cadastro-de-produtos",
+            "outputPath": "dist/cadastro-de-estudantes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "tarefa08-cadastro-de-produtos:build:production"
+              "browserTarget": "cadastro-de-estudantes:build:production"
             },
             "development": {
-              "browserTarget": "tarefa08-cadastro-de-produtos:build:development"
+              "browserTarget": "cadastro-de-estudantes:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tarefa08-cadastro-de-produtos:build"
+            "browserTarget": "cadastro-de-estudantes:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "tarefa08-cadastro-de-produtos"
+  "defaultProject": "cadastro-de-estudantes"
 }
