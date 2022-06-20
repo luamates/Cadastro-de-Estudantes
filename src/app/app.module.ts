@@ -11,6 +11,7 @@ import { ProfessoresComponent } from './professores/professores.component'; // <
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { TeacherDetailComponent } from './teacher-detail/teacher-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TeacherDetailComponent } from './teacher-detail/teacher-detail.componen
     StudentDetailComponent,
     MessagesComponent,
     ProfessoresComponent,
-    TeacherDetailComponent
+    TeacherDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

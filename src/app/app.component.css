@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin: auto;
+}
+
+div {
+    width: 150px;
+    height: 35px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(142, 228, 143);
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+    color: black;
+}
+
+a {
+    background-color: transparent;
+    color: black;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+div:hover {
+    background-color: rgb(38, 171, 47);
+}

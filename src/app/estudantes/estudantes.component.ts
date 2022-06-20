@@ -17,7 +17,7 @@ export class EstudantesComponent implements OnInit {
     curso: 'Direito',
     semestre: '4'
   }
-  
+   
   selectedEstudante?: Estudante;
 
   constructor(private estudanteService: EstudanteService) { }

@@ -1,0 +1,58 @@
+.link {
+    border: none;
+    border-radius: 2px 2px 2px 2px;
+    margin-bottom: 0px;
+    width: 200px;
+    height: 40px;
+    font-size: large;
+    cursor: pointer;
+    background-color: rgb(142, 228, 143);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 14px;
+    color: black;
+    transition: .3s;
+  }
+
+
+  .linkPlus {
+    background-color: transparent;
+    list-style: none;
+    border: none;
+   
+  }
+
+  .link:hover {
+    background-color: rgb(10, 73, 14);
+    color: white;
+  }
+
+  li {
+    list-style: none;
+  }
+  
+  .students-menu {
+    display: flex;
+    flex-direction: row;
+    padding-right: 5%;
+    text-align: center;
+    margin-left: 20%;
+  }
+  
+  .teachers-menu {
+    display: flex;
+    flex-direction: row;
+    padding-right: 5%;
+    text-align: center;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: -50px;
+  }
+  
+  .align {
+    color: rgb(0, 0, 0);
+    padding-left: 38%;
+  }
+  
