@@ -35,7 +35,7 @@ export class EstudantesComponent implements OnInit {
   */
 
   getEstudantes(): void {
-    this.estudanteService.getEstudantes()
+    this.estudanteService.getEstudante()
       .subscribe(Estudante => this.estudantes = ESTUDANTES.slice(1, 10));
   }
 
@@ -43,5 +43,19 @@ export class EstudantesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getEstudantes();
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.estudanteService.addEstudante({ name } as Estudante)
+      .subscribe(estudante => {
+        this.estudantes.push(estudante);
+      });
+  }
+
+  delete(estudante: Estudante): void {
+    this.estudantes = this.estudantes.filter(h => h !== estudante);
+    //this.estudanteService.deleteEstudante(estudante.id).subscribe();
   }
 }

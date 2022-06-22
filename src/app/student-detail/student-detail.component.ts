@@ -31,4 +31,14 @@ export class StudentDetailComponent implements OnInit {
       .subscribe(estudante => this.estudante = estudante);
   }
 
+  save(): void {
+    if (this.estudante) {
+      this.estudanteService.updateEstudante(this.estudante)
+        .subscribe(() => this.goBack());
+    }
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }

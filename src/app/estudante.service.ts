@@ -23,24 +23,42 @@ export class EstudanteService {
 
   private estudantesUrl = 'http://localhost:3000/Estudante';  // URL to web api
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
 
+  /** PUT: update the hero on the server */
+  updateEstudante(estudante: Estudante): Observable<any> {
+    return this.http.put(this.estudantesUrl, estudante, this.httpOptions).pipe(
+      tap(_ => this.log(`updated student id=${estudante.id}`)),
+      catchError(this.handleError<any>('updateEstudante'))
+    );
+  }
 
-
-getEstudantes(id?: number): Observable<Estudante> {
-  const url = `${this.estudantesUrl}/${id}`;
-  return this.http.get<Estudante>(url).pipe(
-    tap(_ => this.log(`fetched student id=${id}`)),
-    catchError(this.handleError<Estudante>(`getEstudante id=${id}`))
+  /** POST: add a new hero to the server */
+  addEstudante(estudante: Estudante): Observable<Estudante> {
+  return this.http.post<Estudante>(this.estudantesUrl, estudante, this.httpOptions).pipe(
+    tap((newEstudante: Estudante) => this.log(`added student w/ id=${newEstudante.id}`)),
+    catchError(this.handleError<Estudante>('addEstudante'))
   );
 }
-
 
   getEstudante(id?: number) {
     const e = ESTUDANTES.find(e => e.id === id)!;
     this.messageService.add(`EstudanteService: fetched estudante=${id}`);
     return of(e);
   }
+
+  /** DELETE: delete the hero from the server */
+deleteEstudante(id: number): Observable<Estudante> {
+  const url = `${this.estudantesUrl}/${id}`;
+
+  return this.http.delete<Estudante>(url, this.httpOptions).pipe(
+    tap(_ => this.log(`deleted student id=${id}`)),
+    catchError(this.handleError<Estudante>('deleteEstudante'))
+  );
+}
  
    /**
  * Handle Http operation that failed.

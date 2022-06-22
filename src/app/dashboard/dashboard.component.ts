@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getEstudantes(): void {
-    this.EstudanteService.getEstudantes()
+    this.EstudanteService.getEstudante()
       .subscribe(Estudante => this.estudantes = ESTUDANTES.slice(1, 5));
   }
 

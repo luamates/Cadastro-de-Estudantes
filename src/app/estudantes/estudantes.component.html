@@ -1,4 +1,12 @@
+<div>
+  <label for="new-estudante">Nome do aluno: </label>
+  <input id="new-estudante" #estudanteName />
 
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(estudanteName.value); estudanteName.value=''">
+    Add estudante
+  </button>
+</div>
 
 <div class="students-list">
   <h2>Estudantes</h2>
@@ -7,10 +15,9 @@
       <button [class.selected]="estudante === selectedEstudante" type="button" routerLink="/detail/{{estudante.id}}">
         <span [class.selected]="estudante === selectedEstudante">{{ estudante.name }}</span>
       </button>
+      <button type="button" class="delete" title="delete estudante" (click)="delete(estudante)">x</button>
     </li>
   </ul>
 </div>
 
-
 <app-student-detail></app-student-detail>
- 
